@@ -45,45 +45,45 @@ const t_menu_item MenuList[] =
 
 	{"SQL",    VOICE_ID_SQUELCH,                       MENU_SQL           },
 	{"STEP",   VOICE_ID_FREQUENCY_STEP,                MENU_STEP          },
-	{"T PWR",  VOICE_ID_POWER,                         MENU_TXP           }, // was "TXP"
+	{"TX GUC", VOICE_ID_POWER,                         MENU_TXP           }, // was "TXP"
 	{"R DCS",  VOICE_ID_DCS,                           MENU_R_DCS         }, // was "R_DCS"
 	{"R CTCS", VOICE_ID_CTCSS,                         MENU_R_CTCS        }, // was "R_CTCS"
 	{"T DCS",  VOICE_ID_DCS,                           MENU_T_DCS         }, // was "T_DCS"
 	{"T CTCS", VOICE_ID_CTCSS,                         MENU_T_CTCS        }, // was "T_CTCS"
-	{"T DIR",  VOICE_ID_TX_OFFSET_FREQUENCY_DIRECTION, MENU_SFT_D         }, // was "SFT_D"
-	{"T OFFS", VOICE_ID_TX_OFFSET_FREQUENCY,           MENU_OFFSET        }, // was "OFFSET"
-	{"T VFO",  VOICE_ID_INVALID,                       MENU_XB            }, // was "WX"
-	{"T TOUT", VOICE_ID_TRANSMIT_OVER_TIME,            MENU_TOT           }, // was "TOT"
+	{"TX YON", VOICE_ID_TX_OFFSET_FREQUENCY_DIRECTION, MENU_SFT_D         }, // was "SFT_D"
+	{"TX OFS", VOICE_ID_TX_OFFSET_FREQUENCY,           MENU_OFFSET        }, // was "OFFSET"
+	{"TX VFO", VOICE_ID_INVALID,                       MENU_XB            }, // was "WX"
+	{"T SURE", VOICE_ID_TRANSMIT_OVER_TIME,            MENU_TOT           }, // was "TOT"
 	{"W/N",    VOICE_ID_CHANNEL_BANDWIDTH,             MENU_W_N           },
-	{"SCRAM",  VOICE_ID_SCRAMBLER_ON,                  MENU_SCR           }, // was "SCR"
-	{"BUSYCL", VOICE_ID_BUSY_LOCKOUT,                  MENU_BCL           }, // was "BCL"
-	{"CH SAV", VOICE_ID_MEMORY_CHANNEL,                MENU_MEM_CH        }, // was "MEM-CH"
-	{"CH DEL", VOICE_ID_DELETE_CHANNEL,                MENU_DEL_CH        }, // was "DEL-CH"
-	{"CH NAM", VOICE_ID_INVALID,                       MENU_MEM_NAME      },
-	{"CH DIS", VOICE_ID_INVALID,                       MENU_MDF           }, // was "MDF"
-	{"BATSAV", VOICE_ID_SAVE_MODE,                     MENU_SAVE          }, // was "SAVE"
+	{"KARIST", VOICE_ID_SCRAMBLER_ON,                  MENU_SCR           }, // was "SCR"
+	{"MSGULK", VOICE_ID_BUSY_LOCKOUT,                  MENU_BCL           }, // was "BCL"
+	{"KN KAY", VOICE_ID_MEMORY_CHANNEL,                MENU_MEM_CH        }, // was "MEM-CH"
+	{"KN SIL", VOICE_ID_DELETE_CHANNEL,                MENU_DEL_CH        }, // was "DEL-CH"
+	{"KN ADI", VOICE_ID_INVALID,                       MENU_MEM_NAME      },
+	{"KN DIS", VOICE_ID_INVALID,                       MENU_MDF           }, // was "MDF"
+	{"BT TSF", VOICE_ID_SAVE_MODE,                     MENU_SAVE          }, // was "SAVE"
 #ifdef ENABLE_VOX
 	{"VOX",    VOICE_ID_VOX,                           MENU_VOX           },
 #endif
-	{"BLT",    VOICE_ID_INVALID,                       MENU_ABR           }, // was "ABR"
-	{"BLTTRX", VOICE_ID_INVALID,                       MENU_ABR_ON_TX_RX  },
-	{"DUALRX", VOICE_ID_DUAL_STANDBY,                  MENU_TDR           }, // was "TDR"
-	{"BEEP",   VOICE_ID_BEEP_PROMPT,                   MENU_BEEP          },
+	{"ISIK",   VOICE_ID_INVALID,                       MENU_ABR           }, // was "ABR"
+	{"ISKTRX", VOICE_ID_INVALID,                       MENU_ABR_ON_TX_RX  },
+	{"CFTDIN", VOICE_ID_DUAL_STANDBY,                  MENU_TDR           }, // was "TDR"
+	{"BIP",    VOICE_ID_BEEP_PROMPT,                   MENU_BEEP          },
 #ifdef ENABLE_VOICE
-	{"VOICE",  VOICE_ID_VOICE_PROMPT,                  MENU_VOICE         },
+	{"SESLI",  VOICE_ID_VOICE_PROMPT,                  MENU_VOICE         },
 #endif
-	{"SC REV", VOICE_ID_INVALID,                       MENU_SC_REV        },
-	{"KEYLOC", VOICE_ID_INVALID,                       MENU_AUTOLK        }, // was "AUTOLk"
-	{"S ADD1", VOICE_ID_INVALID,                       MENU_S_ADD1        },
-	{"S ADD2", VOICE_ID_INVALID,                       MENU_S_ADD2        },
-	{"STE",    VOICE_ID_INVALID,                       MENU_STE           },
-	{"RP STE", VOICE_ID_INVALID,                       MENU_RP_STE        },
-	{"MIC",    VOICE_ID_INVALID,                       MENU_MIC           },
+	{"ARADEV", VOICE_ID_INVALID,                       MENU_SC_REV        },
+	{"TUSKLT", VOICE_ID_INVALID,                       MENU_AUTOLK        }, // was "AUTOLk"
+	{"ARA E1", VOICE_ID_INVALID,                       MENU_S_ADD1        },
+	{"ARA E2", VOICE_ID_INVALID,                       MENU_S_ADD2        },
+	{"KYKKES", VOICE_ID_INVALID,                       MENU_STE           },
+	{"ROLEKY", VOICE_ID_INVALID,                       MENU_RP_STE        },
+	{"MIK",    VOICE_ID_INVALID,                       MENU_MIC           },
 #ifdef ENABLE_AUDIO_BAR
-	{"MICBAR", VOICE_ID_INVALID,                       MENU_MIC_BAR       },
+	{"MIKBAR", VOICE_ID_INVALID,                       MENU_MIC_BAR       },
 #endif
-	{"COMPND", VOICE_ID_INVALID,                       MENU_COMPAND       },
-	{"1 CALL", VOICE_ID_INVALID,                       MENU_1_CALL        },
+	{"KOMPND", VOICE_ID_INVALID,                       MENU_COMPAND       },
+	{"1 ARA", VOICE_ID_INVALID,                       MENU_1_CALL        },
 	{"SLIST",  VOICE_ID_INVALID,                       MENU_S_LIST        },
 	{"SLIST1", VOICE_ID_INVALID,                       MENU_SLIST1        },
 	{"SLIST2", VOICE_ID_INVALID,                       MENU_SLIST2        },
@@ -101,10 +101,10 @@ const t_menu_item MenuList[] =
 	{"D DCD",  VOICE_ID_INVALID,                       MENU_D_DCD         },
 	{"D LIST", VOICE_ID_INVALID,                       MENU_D_LIST        },
 	{"D LIVE", VOICE_ID_INVALID,                       MENU_D_LIVE_DEC    }, // live DTMF decoder
-	{"PONMSG", VOICE_ID_INVALID,                       MENU_PONMSG        },
+	{"AC MSJ", VOICE_ID_INVALID,                       MENU_PONMSG        },
 	{"ROGER",  VOICE_ID_INVALID,                       MENU_ROGER         },
 	{"BATVOL", VOICE_ID_INVALID,                       MENU_VOL           }, // was "VOL"
-	{"BATTXT", VOICE_ID_INVALID,                       MENU_BAT_TXT       },
+	{"BATYAZ", VOICE_ID_INVALID,                       MENU_BAT_TXT       },
 	{"MODE",   VOICE_ID_INVALID,                       MENU_AM            }, // was "AM"
 #ifdef ENABLE_AM_FIX
 	{"AM FIX", VOICE_ID_INVALID,                       MENU_AM_FIX        },
@@ -131,40 +131,40 @@ const t_menu_item MenuList[] =
 #ifdef ENABLE_F_CAL_MENU
 	{"F CALI", VOICE_ID_INVALID,                       MENU_F_CALI        }, // reference xtal calibration
 #endif
-	{"BATCAL", VOICE_ID_INVALID,                       MENU_BATCAL        }, // battery voltage calibration
+	{"BATKAL", VOICE_ID_INVALID,                       MENU_BATCAL        }, // battery voltage calibration
 
 	{"",       VOICE_ID_INVALID,                       0xff               }  // end of list - DO NOT delete or move this this
 };
 
 const char gSubMenu_TXP[3][5] =
 {
-	"LOW",
-	"MID",
-	"HIGH"
+	"DUSK",
+	"ORTA",
+	"YUSK"
 };
 
 const char gSubMenu_SFT_D[3][4] =
 {
-	"OFF",
+	"KPL",
 	"+",
 	"-"
 };
 
 const char gSubMenu_W_N[2][7] =
 {
-	"WIDE",
-	"NARROW"
+	"GENIS",
+	"DAR"
 };
 
 const char gSubMenu_OFF_ON[2][4] =
 {
-	"OFF",
-	"ON"
+	"KPL",
+	"ACIK"
 };
 
 const char gSubMenu_SAVE[5][4] =
 {
-	"OFF",
+	"KPL",
 	"1:1",
 	"1:2",
 	"1:3",
@@ -173,76 +173,76 @@ const char gSubMenu_SAVE[5][4] =
 
 const char gSubMenu_TOT[11][7] =
 {
-	"30 sec",
-	"1 min",
-	"2 min",
-	"3 min",
-	"4 min",
-	"5 min",
-	"6 min",
-	"7 min",
-	"8 min",
-	"9 min",
-	"15 min"
+	"30 sn",
+	"1 dk",
+	"2 dk",
+	"3 dk",
+	"4 dk",
+	"5 dk",
+	"6 dk",
+	"7 dk",
+	"8 dk",
+	"9 dk",
+	"15 dk"
 };
 
 const char gSubMenu_CHAN[3][10] =
 {
-	"OFF",
-	"UPPER\nVFO",
-	"LOWER\nVFO"
+	"KPL",
+	"UST\nVFO",
+	"ALT\nVFO"
 };
 
 const char gSubMenu_XB[3][10] =
 {
-	"MAIN\nVFO",
-	"UPPER\nVFO",
-	"LOWER\nVFO"
+	"ANA\nVFO",
+	"UST\nVFO",
+	"ALT\nVFO"
 };
 
 #ifdef ENABLE_VOICE
 	const char gSubMenu_VOICE[3][4] =
 	{
-		"OFF",
-		"CHI",
-		"ENG"
+		"KPL",
+		"CIN",
+		"ING"
 	};
 #endif
 
 const char gSubMenu_SC_REV[3][13] =
 {
-	"TIME",
-	"CARRIER",
-	"SEARCH"
+	"ZAMAN",
+	"TASYC",
+	"ARAMA"
 };
 
 const char gSubMenu_MDF[4][15] =
 {
-	"FREQ",
-	"CHANNEL\nNUMBER",
-	"NAME",
-	"NAME\n+\nFREQ"
+	"FREK",
+	"KANAL\nNUMARA",
+	"ISIM",
+	"ISIM\n+\nFREK"
 };
 
 #ifdef ENABLE_ALARM
 	const char gSubMenu_AL_MOD[2][5] =
 	{
 		"SITE",
-		"TONE"
+		"TON"
 	};
 #endif
 
 const char gSubMenu_D_RSP[4][11] =
 {
-	"DO\nNOTHING",
-	"RING",
-	"REPLY",
-	"BOTH"
+	"BIR SEY\nYAPM",
+	"CALDR",
+	"CEVAP",
+	"IKISI"
 };
 
 const char gSubMenu_PTT_ID[5][15] =
 {
-	"OFF",
+	"KPL",
 	"KEY\nUP",
 	"KEY\nDOWN",
 	"KEY\nUP+DOWN",
