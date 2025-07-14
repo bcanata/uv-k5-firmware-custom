@@ -136,6 +136,7 @@ ifeq ($(ENABLE_AIRCOPY),1)
 	OBJS += app/aircopy.o
 endif
 OBJS += app/app.o
+OBJS += app/aprs.o
 OBJS += app/chFrScanner.o
 OBJS += app/common.o
 OBJS += app/dtmf.o

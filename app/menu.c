@@ -23,6 +23,7 @@
 #include "app/generic.h"
 #include "app/menu.h"
 #include "app/scanner.h"
+#include "app/aprs.h"
 #include "audio.h"
 #include "board.h"
 #include "bsp/dp32g030/gpio.h"
@@ -370,6 +371,11 @@ int MENU_GetLimits(uint8_t menu_id, int32_t *pMin, int32_t *pMax)
         case MENU_BATTYP:
             //*pMin = 0;
             *pMax = 2;
+            break;
+
+        case MENU_APRS:
+            *pMin = 0;
+            *pMax = 1;
             break;
 
         case MENU_F1SHRT:
@@ -893,6 +899,13 @@ void MENU_AcceptSetting(void)
             gEeprom.BATTERY_TYPE = gSubMenuSelection;
             break;
 
+        case MENU_APRS:
+            if (gSubMenuSelection == 1) {
+                // Send APRS packet
+                APRS_SendPacket();
+            }
+            break;
+
         case MENU_F1SHRT:
         case MENU_F1LONG:
         case MENU_F2SHRT:
@@ -1332,6 +1345,10 @@ void MENU_ShowCurrentSetting(void)
 
         case MENU_BATTYP:
             gSubMenuSelection = gEeprom.BATTERY_TYPE;
+            break;
+
+        case MENU_APRS:
+            gSubMenuSelection = 0;
             break;
 
         case MENU_F1SHRT:

@@ -179,6 +179,7 @@ const t_menu_item MenuList[] =
     {"BatCal",      MENU_BATCAL        }, // battery voltage calibration
     {"BatTyp",      MENU_BATTYP        }, // battery type 1600/2200mAh
     {"Reset",       MENU_RESET         }, // might be better to move this to the hidden menu items ?
+    {"APRS",        MENU_APRS          }, // APRS packet transmission
 
     {"",                              0xff               }  // end of list - DO NOT delete or move this this
 };
@@ -340,6 +341,12 @@ const char gSubMenu_BATTYP[][9] =
     "1600mAh",
     "2200mAh",
     "3500mAh"
+};
+
+const char gSubMenu_APRS[][5] =
+{
+    "OFF",
+    "SEND"
 };
 
 #ifndef ENABLE_FEAT_F4HWN
