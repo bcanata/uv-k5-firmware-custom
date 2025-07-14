@@ -1,0 +1,23 @@
+--- app/aprs.c.orig	2023-07-14 17:00:00.000000000 +0000
++++ app/aprs.c	2023-07-14 17:00:00.000000000 +0000
+@@ -66,8 +66,9 @@
+     
+     // Source address (Your callsign)
+     const char *callsign = APRS_CALLSIGN;
++    size_t callsign_len = strlen(callsign);
+     for (int i = 0; i < 6; i++) {
+-        if (i < strlen(callsign)) {
++        if ((size_t)i < callsign_len) {
+             buffer[pos++] = callsign[i] << 1;
+         } else {
+             buffer[pos++] = ' ' << 1;
+@@ -81,7 +82,8 @@
+     buffer[pos++] = 0xF0;
+     
+     // Information field (payload)
+-    for (int i = 0; i < strlen(payload); i++) {
++    size_t payload_len = strlen(payload);
++    for (size_t i = 0; i < payload_len; i++) {
+         buffer[pos++] = payload[i];
+     }
+     
