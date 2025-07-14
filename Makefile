@@ -268,7 +268,7 @@ endif
 
 CFLAGS =
 ifeq ($(ENABLE_CLANG),0)
-	CFLAGS += -Oz -Wall -Werror -Wno-sign-compare -mcpu=cortex-m0 -fshort-enums -fno-delete-null-pointer-checks -std=c2x -MMD
+	CFLAGS += -Oz -Wall -Werror -Wno-error=sign-compare -mcpu=cortex-m0 -fshort-enums -fno-delete-null-pointer-checks -std=c2x -MMD
 	#CFLAGS += -Os -Wall -Werror -mcpu=cortex-m0 -fno-builtin -fshort-enums -fno-delete-null-pointer-checks -std=c2x -MMD
 	#CFLAGS += -Os -Wall -Werror -mcpu=cortex-m0 -fno-builtin -fshort-enums -fno-delete-null-pointer-checks -std=c11 -MMD
 	#CFLAGS += -Os -Wall -Werror -mcpu=cortex-m0 -fno-builtin -fshort-enums -fno-delete-null-pointer-checks -std=c99 -MMD

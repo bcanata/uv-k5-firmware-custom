@@ -66,8 +66,9 @@ void APRS_EncodeAX25(uint8_t *buffer, uint16_t *length, const char *payload)
     // Source address (Your callsign)
     const char *callsign = APRS_CALLSIGN;
     size_t callsign_len = strlen(callsign);
-    for (int i = 0; i < 6; i++) {
-        if ((size_t)i < callsign_len) {
+    int i;
+    for (i = 0; i < 6; i++) {
+        if (i < (int)callsign_len) {
             buffer[pos++] = callsign[i] << 1;
         } else {
             buffer[pos++] = ' ' << 1;
@@ -83,8 +84,9 @@ void APRS_EncodeAX25(uint8_t *buffer, uint16_t *length, const char *payload)
     
     // Information field (payload)
     size_t payload_len = strlen(payload);
-    for (size_t i = 0; i < payload_len; i++) {
-        buffer[pos++] = payload[i];
+    size_t j;
+    for (j = 0; j < payload_len; j++) {
+        buffer[pos++] = payload[j];
     }
     
     // End flag
